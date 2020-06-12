@@ -1,0 +1,5 @@
+import numpy as np
+import cv2
+
+img = np.zeros((64,64)), np.uint8)
+print(img)
