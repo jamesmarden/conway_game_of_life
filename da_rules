@@ -1,0 +1,15 @@
+# live_neighbors = FIGURE THIS OUT IN DATASET
+
+
+if cell == 0:
+  if live_neighbors == 3:
+  cell = 1
+  
+else:
+  if live_neighbors < 2:
+    cell = 0 
+  if live neighbors > 3:
+    cell = 0
+  else:
+    cell = 1
+  
