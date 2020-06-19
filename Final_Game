@@ -2,8 +2,15 @@ import random
 import os
 from time import sleep
 
-N = 50
-
+N = int(input())
+spawn_prob = random.randrange(1, 10)/10
+A = N*N
+a = str(A)
+sp = str(spawn_prob)
+est = A*spawn_prob
+estimate = str(est)
+print("You will play with a board of " + a + " squares. The probability of a rabbit starting in each square is " + sp + ". On average you will begin the game with " + estimate + " rabbits. Let's see how it goes.")
+sleep(5)
 def should_be_alive(live_neighbors, i_am_alive):
         if i_am_alive:
                 if live_neighbors < 2:
@@ -50,7 +57,7 @@ current = []
 for i in range(N):
         current.append([])
         for j in range(N):
-                if random.random() < 0.5:
+                if random.random() < spawn_prob:
                         current[i].append(False)
                 else:
                         current[i].append(True)
